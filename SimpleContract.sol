@@ -6,15 +6,13 @@ contract SimpleContract {
     uint256 public storedData;
     address public owner;
 
-    constructor() {
-        owner = msg.sender;
-    }
+    constructor() {}
 
     function set(uint256 x) public {
         storedData = x;
     }
 
-    function get() public returns (uint256) {
+    function get() public pure returns (uint256) {
         return storedData;
     }
 
