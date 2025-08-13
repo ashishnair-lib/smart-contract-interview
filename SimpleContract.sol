@@ -12,6 +12,10 @@ contract SimpleContract {
         storedData = x;
     }
 
+    function deposit() external {
+        balances[msg.sender] += msg.value;
+    }
+
     function get() public pure returns (uint256) {
         return storedData;
     }
